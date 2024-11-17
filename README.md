@@ -10,7 +10,18 @@ The model uses MobileNet-SSD algorithm for object detection and Google Speech Re
 
 Coco.names conatains the trained dataset which should be kept in the same directory
 
-webcam.py is the code implementation should be ran after installing necessary packages.
+trust_worthy_ai.py is the code implementation should be ran after installing necessary packages.
+
+
+To implement in your local machine follow below changes:
+1. Line 3:
+LABELS = open("D:/raveesh/yolo-master/yolo-coco/coco.names").read().strip().split("\n")
+Please change the directory path to where you store coco.names file
+
+2.Line 12:
+net = cv2.dnn.readNetFromDarknet("yolo-coco/yolov3.cfg", "yolo-coco/yolov3.weights")
+
+//redirect to your respective paths for yolov3.weights and yolov3.cfg files
 
 Feel free to contact rm159@usf.edu
 
